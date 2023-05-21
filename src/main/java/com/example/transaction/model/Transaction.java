@@ -13,13 +13,13 @@ public class Transaction implements Serializable{
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long transactionId;
 
-    @Column(name = "trans_type")
+    @Column(name = "transType")
     private String transType = null;
 
     @Column(name = "name")
     private String name=null;
 
-    @Column(name = "entry_date", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    @Column(name = "entryDate", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date entryDate;
 
     @Column(name = "amount")

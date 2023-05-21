@@ -1,4 +1,4 @@
-transactionId,name,trans_type,entry_date,amount
+transactionId,name,transType,entryDate,amount
 1,vishal,CASH_TRANSFER,09/04/2023,100
 2,vishal,CASH_TRANSFER,09/03/2023,200
 3,vishal,CASH_TRANSFER,19/02/2023,300
