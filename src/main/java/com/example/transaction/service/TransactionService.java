@@ -10,12 +10,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.transaction.errorHandler.TransactionNotFoundException;
 import com.example.transaction.model.Transaction;
 import com.example.transaction.repositories.TransactionRepository;
 import com.example.transaction.util.DataLoader;
 
+@Service
 public class TransactionService implements IService{
     @Autowired
     private TransactionRepository repository;
@@ -79,11 +81,11 @@ public class TransactionService implements IService{
         if (searchCriteria.getName() != null || !searchCriteria.getName().isEmpty()) {
             result = repository.findByNameContainingIgnoreCase(searchCriteria.getName());
         } else if (searchCriteria.getTransactionType() != null) {
-            result = repository.findByTransactionType(searchCriteria.getTransactionType());
+            result = repository.findByTransTypeEquals(searchCriteria.getTransactionType());
         } else if (searchCriteria.getEntryDate() != null) {
-            result = repository.findByEntryDate(searchCriteria.getEntryDate());
+            result = repository.findByEntryDateEquals(searchCriteria.getEntryDate());
         } else if (searchCriteria.getAmount() != null) {
-            result = repository.findByAmount(searchCriteria.getAmount());
+            result = repository.findByAmountEquals(searchCriteria.getAmount());
         }
         return result;
     }

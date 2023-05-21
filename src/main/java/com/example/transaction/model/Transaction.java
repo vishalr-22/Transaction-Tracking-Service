@@ -2,15 +2,15 @@ package com.example.transaction.model;
 
 import java.io.Serializable;
 import java.sql.Date;
-import org.springframework.data.annotation.Id;
 
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Transaction")
 public class Transaction implements Serializable{
+    @Id
     @Column(name = "transactionId")
-    @Id @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long transactionId;
 
     @Column(name = "trans_type")

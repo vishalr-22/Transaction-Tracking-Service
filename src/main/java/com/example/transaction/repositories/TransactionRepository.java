@@ -9,9 +9,9 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
     
     List<Transaction> findByNameContainingIgnoreCase(String name);
 
-    List<Transaction> findByTransactionType(String transType);
+    List<Transaction> findByTransTypeEquals(String transType);
 
-    List<Transaction> findByAmount(Integer amount);
+    List<Transaction> findByAmountEquals(Integer amount);
 
-    List<Transaction> findByEntryDate(Date entryDate);
+    List<Transaction> findByEntryDateEquals(Date entryDate);
 }
