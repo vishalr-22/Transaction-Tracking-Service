@@ -3,7 +3,6 @@ package com.example.transaction.model;
 import java.io.Serializable;
 import java.sql.Date;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 import jakarta.persistence.*;
 
@@ -15,7 +14,7 @@ public class Transaction implements Serializable{
     private Long transactionId;
 
     @Column(name = "trans_type")
-    private Integer transType = null;
+    private String transType = null;
 
     @Column(name = "name")
     private String name=null;
@@ -39,7 +38,7 @@ public class Transaction implements Serializable{
                 ", name='" + name + '\'' +
                 '}';
     }
-    public Transaction( Integer transType, String name, Date entryDate, Integer amount) {
+    public Transaction( String transType, String name, Date entryDate, Integer amount) {
         this.transType = transType;
         this.amount = amount;
         this.entryDate = entryDate;
@@ -52,6 +51,14 @@ public class Transaction implements Serializable{
 
     public void setTransactionId(Long transactionId) {
         this.transactionId = transactionId;
+    }
+
+    public String getTransactionType() {
+        return transType;
+    }
+
+    public void setTransactionType(String transType) {
+        this.transType = transType;
     }
 
     public Integer getAmount() {

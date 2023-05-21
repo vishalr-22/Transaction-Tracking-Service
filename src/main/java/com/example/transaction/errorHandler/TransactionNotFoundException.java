@@ -1,4 +1,4 @@
-package errorHandler;
+package com.example.transaction.errorHandler;
 
 public class TransactionNotFoundException {
     
