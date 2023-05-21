@@ -1,6 +1,6 @@
 package com.example.transaction.repositories;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 import com.example.transaction.model.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
