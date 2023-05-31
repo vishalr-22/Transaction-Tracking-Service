@@ -13,12 +13,12 @@
             </tr>
             <tr>
                 <td><b>Transaction Type</b></td>
-                <td><input type='number' name='schoolYear' class='form-control' min="1950" max="2020" required
+                <td><input type='text' name='transType' class='form-control' min="1950" max="2020" required
                            value="${transaction.transType}"/></td>
             </tr>
             <tr>
                 <td><b>Amount</b></td>
-                <td><input type='number' name='campus' class='form-control' required value="${transaction.amount}"/></td>
+                <td><input type='number' name='amount' class='form-control' required value="${transaction.amount}"/></td>
             </tr>
             <tr>
                 <td><b>Transaction date</b></td>

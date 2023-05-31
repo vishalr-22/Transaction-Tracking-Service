@@ -7,22 +7,22 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-md-2 pt-3">
                 <div class="form-group ">
-                    <input type="number" placeholder="By year" name="schoolYear" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="form-group">
-                    <input type="number" placeholder="By campus" name="campus" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="form-group">
-                    <input type="number" placeholder="By grade level" name="gradeLevel" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-2 pt-3">
-                <div class="form-group">
                     <input type="text" placeholder="By name" name="name" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-2 pt-3">
+                <div class="form-group">
+                    <input type="text" placeholder="By transType" name="transType" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-2 pt-3">
+                <div class="form-group">
+                    <input type="amount" placeholder="By amount" name="amount" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-2 pt-3">
+                <div class="form-group">
+                    <input type="date" placeholder="By entryDate" name="entryDate" class="form-control">
                 </div>
             </div>
             <div class="col-md-2">
@@ -38,7 +38,7 @@
     <table class="table table-bordered table-striped text-center">
         <thead>
         <tr class="text-center">
-            <%--<th><b>transaction Id</b></th>--%>
+            <th class="text-center"><b>transaction Id</b></th>
             <th class="text-center"><b>Name</b></th>
             <th class="text-center"><b>Transaction Type</b></th>
             <th class="text-center"><b>Entry Date</b></th>
@@ -50,7 +50,7 @@
 
         <c:forEach items="${list}" var="transaction">
             <tr>
-                <%--<td><c:out value="${transaction.transactionId}"></c:out></td>--%>
+                <td><c:out value="${transaction.transactionId}"></c:out></td>
                 <td><c:out value="${transaction.name}"></c:out></td>
                 <td><c:out value="${transaction.transType}"></c:out></td>
                 <td><c:out value="${transaction.entryDate}"></c:out></td>
